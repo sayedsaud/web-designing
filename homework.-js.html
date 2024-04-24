@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = [0,1,[{'data':['a1','a2','a3']}]]
+        b = a[2][0]['data'][1]
+        document.write(b , "<br>")
+        a1 = [{'data':'xyz'}]
+        b1 = a1[0]['data'] 
+        document.write(b1 , '<br>')
+        a2 = [{'data':['xyz']}]
+        b2 = a2[0]['data'][0]
+        document.write(b2 , '<br>')
+        c = {data1: 'xyz', data2:{data3:[{'name':'itv','name2':{'age':[11,22]}}]}}
+        c1 = c['data2']['data3'][0]['name2']['age'][1]
+        document.write(c1)
+    </script>
+    
+</body>
+</html>

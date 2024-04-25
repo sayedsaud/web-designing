@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body id="b">
+    <h1 id="h">helloo java script</h1>
+    <script>
+         var arr = ['yellow','red','green','grey','black']
+           var i=0
+        function userinput(){
+            var a = document.getElementById("h");
+            a.innerHTML = "heyyyyyyy-javascript"
+            a.style.color = "black"
+            // b.style.backgroundImage = "url('images/ht5.jpg')"  
+
+            var b = document.getElementById("b")
+            b.style.backgroundColor = arr[i]
+            i++
+            if(arr.length<=i){
+                i=0
+            }
+          
+          
+        }
+    </script>
+    
+    <button onclick="userinput()">click here</button>
+    <a href=""><button>refresh</button></a>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function data(){
+            fname = document.getElementById("fname1").value
+            age = document.getElementById("age1").value
+            contact = document.getElementById("con1").value
+            
+            console.log(fname)
+            console.log(age)
+            console.log(contact)
+
+            if(fname=="" || fname==null){
+                 alert("fname is required")
+            }
+
+            else if(age==""  || age == null || age<0){
+                 alert("age is also required & cannot be negative ")
+            }
+            else if (contact.length !=10){
+                alert("length of contact should be 10")
+            }
+           document.getElementById('f').innerHTML = fname
+           document.getElementById('a').innerHTML = age
+           document.getElementById('c').innerHTML = contact
+
+        }
+
+        function Contact(){
+            contact = document.getElementById("con1").value  
+            document.getElementById('c').innerHTML = contact
+            if (contact.length>10){
+                alert("you cannot add more then 10 number")
+            } 
+        }
+
+    </script>
+
+    <h1>firstName: <span id="f"></span></h1>
+    <h1>age :<span id="a"></span></h1>
+    <h1>contact :<span id="c"></span></h1>
+    <form name="fn">
+        fname : <input type="text" name="fname" id="fname1"/>
+        age : <input type="number" name="age" id="age1"/>
+        contact: <input type="number"  id="con1" oninput="Contact()"/>
+
+    </form>
+    <input type="submit" onclick="data()"/>
+</body>
+</html>

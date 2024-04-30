@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function data(){
+            fname = document.getElementById("fname1").value
+            age = document.getElementById("age1").value
+            contact = document.getElementById("con1").value
+            
+            console.log(fname)
+            console.log(age)
+            console.log(contact)
+
+            if(fname=="" || fname==null){
+                document.getElementById('btn').style.float = "right"
+            }
+
+            else if(age==""  || age == null || age<0){
+                document.getElementById('btn').style.float = "right"
+            }
+
+
+            else if (contact.length !=10){
+                document.getElementById('btn').style.float = "right"
+            }
+
+            
+           document.getElementById('f').innerHTML = fname
+           document.getElementById('a').innerHTML = age
+           document.getElementById('c').innerHTML = contact
+
+        }
+
+        function Contact(){
+            contact = document.getElementById("con1").value  
+            document.getElementById('c').innerHTML = contact
+            if (contact.length>10){
+                alert("you cannot add more then 10 number")
+            } 
+        }
+        function out(){
+                document.getElementById('btn').style.float = "left"
+            }
+
+    </script>
+
+    <h1>firstName: <span id="f"></span></h1>
+    <h1>age :<span id="a"></span></h1>
+    <h1>contact :<span id="c"></span></h1>
+    <form name="fn">
+        fname : <input type="text" name="fname" id="fname1"/>
+        age : <input type="number" name="age" id="age1"/>
+        contact: <input type="number"  id="con1" oninput="Contact()"/>
+
+    </form>
+    <input type="submit" onmouseover="data()" onmouseout="out()" id="btn"/>
+</body>
+</html>

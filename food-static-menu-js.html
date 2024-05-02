@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food-menu</title>
+    <style>
+        table,td,th{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        table{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <button onclick="FoodList('veg')">veg-food</button>
+    <button onclick="FoodList('nonveg')">nonveg-food</button>
+    <table width="450" id="tb">
+        <tr>
+            <th>sr</th>
+            <th>food-name</th>
+            <th>Quantity-half-price</th>
+            <th>Quantity-full-price</th>
+            <th>image</th>
+            <tr>
+                <td>1</td>
+                <td id="td1"></td>
+                <td id="td2"></td>
+                <td id="td3"></td>
+                <td id="td4"></td>
+            
+            </tr>
+        </tr>
+        
+    </table>
+    <script>
+        function FoodList(type){
+            if(type=='veg'){
+                document.getElementById('td1').innerHTML = "paneer tikka"
+                document.getElementById('td2').innerHTML = "180/-"
+                document.getElementById('td3').innerHTML = "300/-"
+                document.getElementById('td4').innerHTML = "<img src = 'images/paneer.jpg' height='100px'width='100px'/>"
+                document.getElementById('tb').style.display ='block';
+            }
+            else if(type=='nonveg'){
+                document.getElementById('td1').innerHTML = "chiken tikka"
+                document.getElementById('td2').innerHTML = "200/-"
+                document.getElementById('td3').innerHTML = "350/-"
+                document.getElementById('td4').innerHTML = "<img src = 'images/chi tikka.jpg' height='100px'width='100px'/>"
+                document.getElementById('tb').style.display ='block'
+            }
+        }
+    </script>
+</body>
+</html>

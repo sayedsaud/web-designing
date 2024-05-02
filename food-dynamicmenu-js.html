@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic-menu</title>
+    <style>
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <button onclick="FoodList('veg')">veg-food</button>
+    <button>non-veg-food</button>
+    <table>
+        <tr>
+            <th>sr</th>
+            <th>food-name</th>
+            <th>Quantity-half-price</th>
+            <th>Quantity-full-price</th>
+            <th>image</th>
+        </tr>
+
+    </table>
+
+    <script>
+        function FoodList(type){
+            dataveg = [[1,'panner tikka',180,300,'images/paneer.jpg'],[2,'shahi paneer',200,380,'images/shahipaneer.jpg']]
+            if(type=='veg'){
+                for(i=0;i<dataveg.length;i++){
+                    food += "<tr>"
+                for(j=0;j<dataveg[i].length;j++){
+            //console.log(dataveg[i][j])
+           
+            if (j==4){
+              food+=`<td><img src='${dataveg[i][j]}' width='50px' height='50px'/></td> `
+            }
+            else{
+              food+=`<td>${dataveg[i][j]}</td>`
+            }
+          }
+           food += "</tr>"
+          console.log(food)
+           }
+                document.getElementById('fooddata').innerHTML = food
+                document.getElementById('tb').style.display = 'block';
+            }
+            else if(type=='non-veg'){
+            document.getElementById('td1').innerHTML = 'Chicken Tikka'
+            document.getElementById('td2').innerHTML = "500"
+            document.getElementById('td3').innerHTML = "300"
+            document.getElementById('td4').innerHTML = "<img src='images/u.jpg' height='50px' width='50px' />"
+      }
+
+        }
+        </script>
+</body>
+</html>

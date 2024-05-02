@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        a = 100
-        b = 13
-        c = 18
-        d = 20
-        e = 10
-        f = 5
-        if(a>b && a>c && a>d && a>e && a>f){
-            alert('a is greatest')
+       /* a =[55,99,10,0,1,0,3,101,2,5,8]
+        mx=a[0]
+        for(i of a){
+            if(mx<i){
+                mx=i
+            }
         }
-        else if(b>a && b>c && b>d && b>e && b>f){
-            alert('b is greatest')
+        document.write(mx  ,  "<br>")
+*/
+
+       /* a =[55,99,10,0,1,0,3,101,2,5,8]
+        for(i=0;i<a.length;i++){
+            for(j=0;j<a.length;j++){
+                if(a[i]<a[j]){
+                    t=a[i]
+                    a[i]=a[j]
+                    a[j]=t
+            
+                }
+                console.log(a)
+            }
+
         }
-        else if(c>a && c>b && c>d && c>e && c>f){
-            alert('c is greatest')
+
+        document.write("greatest number from array",a[(a.length-1)] +  "<br>")
+        document.write(" second greatest number from array",a[(a.length-2)] +  "<br>")
+        document.write("minimum number from array",a[0] +  "<br>")
+*/
+
+
+
+
+        a = [55,99,10,0,1,0,3,101,2,5,8]
+        count=0
+        for(i=0;i<a.length;i++0){
+            for(j=0;j<a.length;j++){
+                if(a[i]==a[j]){
+                    count++
+                    document.write(a[i]   +"<br")
+                }
+            }
         }
-        else if(d>a && d>b && d>c && d>e && d>f){
-            alert('d is greatest')
-        }
-        else if(e>a && e>b && e>c && e>d && e>f){
-            alert('e is greatest')
-        }
-        else{
-            alert('f is greatest')
-        }
+
+        
     </script>
 </body>
 </html>

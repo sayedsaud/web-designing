@@ -7,19 +7,11 @@
 </head>
 <body>
     <script>
-        for(i=0;i<=10;i++){
-    document.write(i + "<br>")
-}
-let n=10
-i=1
-fact=1
-while(i<=n)
-{
-  fact = fact*i 
-  document.write(`fact of ${i} is ${fact}<br>`)
-  i++
-}
- //alert(fact)
+    a = {name:'saud', age: 23 ,city: 'mumbai'}
+    for (i in a){
+        document.write(i + "=" +a[i] , "<br>")
+
+    }
     </script>
 </body>
 </html>

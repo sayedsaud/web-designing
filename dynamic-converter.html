@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currencyt</title>
+</head>
+<body>
+    <script>
+        function converter(){
+            from = document.fm.from.value;
+            to = document.fm.to.value;
+            amt = parseFloat(document.fm.amt.value);
+            
+            fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+            .then(re=>re.json())
+            .then(data=>{
+              d = data['rates']
+              for (i in d){
+                document.getElementById('from').innerHTML += `<option values="${i}">${i}</option>`
+                document.getElementById('to').innerHTML += `<option values="${i}">${i}</option>`
+              }
+
+            })
+        }
+    </script>
+    <form name="fm">
+        from:
+        <select name="from" id="from">
+
+        
+    </select>
+    <br><br>
+    to:
+    <select name="to" id="to">
+        
+        </select>
+        <br><br>
+        amount:<input type="number" placeholder="enter amount" name="amt"/>
+
+
+    </form>
+    <input type="submit" value="convert" onclick="converter()"/>
+    <h1>converted amount =<span id="h1"></span></h1>
+</body>
+</html>
+</body>
+</html>
